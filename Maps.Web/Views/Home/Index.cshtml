@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="map"></div>
+
+@section Scripts {
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=[KEY]&libraries=visualization"></script>
+
+    <environment include="Development,Staging">
+        <script type="text/javascript" src="~/js/maps.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment exclude="Development,Staging">
+        <script type="text/javascript" src="~/js/maps.min.js" asp-append-version="true"></script>
+    </environment>
+
+}

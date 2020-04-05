@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nkBtz/aUUn8GLZbk3WJshPij+UOi8OYLxDRp74fgb9tiWEZBzyHiEJuGFXOwirlw9HZmp0ijTlEZeuOxehkyUg==",
+  "success": true,
+  "projectFilePath": "D:\\GITHUB\\maps-covid19\\Maps.Web\\Maps.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\buildbundlerminifier\\3.2.447\\buildbundlerminifier.3.2.447.nupkg.sha512"
+  ],
+  "logs": []
+}
