@@ -79,6 +79,8 @@ function initialize() {
 
         function ShowMap() {
 
+            var locations = []
+
             var urlRequest = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/' + FechaHoy + '.csv';
 
             Promise.all([
@@ -98,9 +100,10 @@ function initialize() {
 
                     //console.log(response);
 
+                    locations = [];
                     var json = response[0];
 
-                    var maxConfirmed = 2200;
+                    var maxConfirmed = 22000;
                     var heatmapData = [];
 
                     //var markerExamples = [];
@@ -119,19 +122,43 @@ function initialize() {
 
                         heatmapData.push(weightedLoc);
 
+                        locations.push({ lat: latLng.lat(), lng: latLng.lng() })
+                    
                         //var marker = new google.maps.Marker({
                         //    position: latLng,
                         //    map: map
                         //});
                     }
 
-                    var heatmap = new google.maps.visualization.HeatmapLayer({
-                        data: heatmapData,
-                        dissipating: true,
-                        maxIntensity: 50,
-                        radius: 25,
-                        map: map
+                    //var heatmap = new google.maps.visualization.HeatmapLayer({
+                    //    data: heatmapData,
+                    //    dissipating: true,
+                    //    maxIntensity: 50,
+                    //    radius: 25,
+                    //    map: map
+                    //});
+
+                    
+
+                    // Create an array of alphabetical characters used to label the markers.
+                    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+                    // Add some markers to the map.
+                    // Note: The code uses the JavaScript Array.prototype.map() method to
+                    // create an array of markers based on a given "locations" array.
+                    // The map() method here has nothing to do with the Google Maps API.
+                    var markers = locations.map(function (location, i) {
+                        return new google.maps.Marker({
+                            position: location,
+                            label: labels[i % labels.length]
+                        });
                     });
+
+                    // Add a marker clusterer to manage the markers.
+                    var markerCluster = new MarkerClusterer(map, markers,
+                        { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+
+
 
                 }).catch(error => {
                     console.log('Error para la fecha ' + FechaHoy);
@@ -141,7 +168,7 @@ function initialize() {
                     console.log('Se mostrará data de la fecha ' + FechaHoy);
 
                     ShowMap();
-                });
+                });          
 
         }
 

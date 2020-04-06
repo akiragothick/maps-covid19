@@ -45,7 +45,6 @@ D:\GITHUB\maps-covid19\Maps.Web\bin\Debug\netcoreapp3.1\Maps.Web.dll
 D:\GITHUB\maps-covid19\Maps.Web\bin\Debug\netcoreapp3.1\Maps.Web.pdb
 D:\GITHUB\maps-covid19\Maps.Web\bin\Debug\netcoreapp3.1\Maps.Web.Views.dll
 D:\GITHUB\maps-covid19\Maps.Web\bin\Debug\netcoreapp3.1\Maps.Web.Views.pdb
-D:\GITHUB\maps-covid19\Maps.Web\obj\Debug\netcoreapp3.1\Maps.Web.csprojAssemblyReference.cache
 D:\GITHUB\maps-covid19\Maps.Web\obj\Debug\netcoreapp3.1\Maps.Web.csproj.CoreCompileInputs.cache
 D:\GITHUB\maps-covid19\Maps.Web\obj\Debug\netcoreapp3.1\Maps.Web.MvcApplicationPartsAssemblyInfo.cache
 D:\GITHUB\maps-covid19\Maps.Web\obj\Debug\netcoreapp3.1\Maps.Web.RazorAssemblyInfo.cache
